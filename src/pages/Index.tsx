@@ -110,6 +110,51 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section id="layanan" className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <h2 className="text-4xl font-bold text-foreground mb-6">Layanan Kami</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mb-4"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Berbagai layanan transportasi untuk memenuhi kebutuhan perjalanan Anda
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service) => {
+              const serviceImages: { [key: number]: string } = {
+                1: serviceTour,
+                2: serviceRentcar,
+                3: serviceKkn,
+              };
+              
+              return (
+                <Card key={service.id} className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
+                  <div className="aspect-video overflow-hidden">
+                    <img 
+                      src={serviceImages[service.id]} 
+                      alt={`${service.name} - Layanan transportasi terpercaya`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-2xl font-bold text-foreground mb-3">{service.name}</h3>
+                    <p className="text-muted-foreground mb-4">{service.description}</p>
+                    <Button 
+                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                      onClick={() => scrollToSection("kontak")}
+                    >
+                      Hubungi Kami
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Fleet Section */}
       <section id="armada" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -221,51 +266,6 @@ const Index = () => {
                 Tim driver terlatih dengan pengetahuan rute yang sangat baik
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="layanan" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="text-4xl font-bold text-foreground mb-6">Layanan Kami</h2>
-            <div className="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Berbagai layanan transportasi untuk memenuhi kebutuhan perjalanan Anda
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service) => {
-              const serviceImages: { [key: number]: string } = {
-                1: serviceTour,
-                2: serviceRentcar,
-                3: serviceKkn,
-              };
-              
-              return (
-                <Card key={service.id} className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
-                  <div className="aspect-video overflow-hidden">
-                    <img 
-                      src={serviceImages[service.id]} 
-                      alt={`${service.name} - Layanan transportasi terpercaya`}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-2xl font-bold text-foreground mb-3">{service.name}</h3>
-                    <p className="text-muted-foreground mb-4">{service.description}</p>
-                    <Button 
-                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
-                      onClick={() => scrollToSection("kontak")}
-                    >
-                      Hubungi Kami
-                    </Button>
-                  </CardContent>
-                </Card>
-              );
-            })}
           </div>
         </div>
       </section>
