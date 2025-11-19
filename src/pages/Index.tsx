@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Car, Shield, Clock, Users, Mail, Phone, MapPin } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Car, Shield, Clock, Users, Mail, Phone, MapPin, CheckCircle, XCircle } from "lucide-react";
+import { cars } from "@/data/cars";
 import heroImage from "@/assets/hero-car.jpg";
 import carSedan from "@/assets/car-sedan.jpg";
 import carSuv from "@/assets/car-suv.jpg";
@@ -112,87 +114,54 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Sedan */}
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
-              <div className="aspect-square overflow-hidden">
-                <img 
-                  src={carSedan} 
-                  alt="Sedan mewah untuk perjalanan eksekutif" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
+          <div className="relative">
+            <div className="overflow-x-auto pb-4 scrollbar-hide">
+              <div className="flex gap-6 px-4">
+                {cars.map((car) => (
+                  <Card 
+                    key={car.id} 
+                    className="flex-shrink-0 w-[320px] overflow-hidden hover:shadow-lg transition-shadow animate-scale-in"
+                  >
+                    <div className="aspect-[4/3] overflow-hidden relative">
+                      <img 
+                        src={car.image} 
+                        alt={`${car.name} - Rental mobil terpercaya`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 right-4">
+                        {car.available ? (
+                          <Badge className="bg-green-500 hover:bg-green-600 text-white">
+                            <CheckCircle className="w-3 h-3 mr-1" />
+                            Tersedia
+                          </Badge>
+                        ) : (
+                          <Badge variant="destructive">
+                            <XCircle className="w-3 h-3 mr-1" />
+                            Tidak Tersedia
+                          </Badge>
+                        )}
+                      </div>
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="text-2xl font-bold text-foreground mb-3">{car.name}</h3>
+                      <div className="flex items-center justify-between mb-4">
+                        <div>
+                          <p className="text-sm text-muted-foreground">Rental 24 Jam</p>
+                          <p className="text-2xl font-bold text-accent">{car.price24h}</p>
+                        </div>
+                      </div>
+                      <Button 
+                        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                        disabled={!car.available}
+                        onClick={() => scrollToSection("kontak")}
+                      >
+                        {car.available ? "Reservasi Sekarang" : "Tidak Tersedia"}
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-2">Sedan</h3>
-                <p className="text-muted-foreground mb-4">
-                  Pilihan sempurna untuk perjalanan bisnis dan acara formal dengan kenyamanan maksimal.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-accent" />
-                    Kapasitas 4-5 penumpang
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-accent" />
-                    Asuransi lengkap
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* SUV */}
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
-              <div className="aspect-square overflow-hidden">
-                <img 
-                  src={carSuv} 
-                  alt="SUV tangguh untuk perjalanan keluarga" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-2">SUV</h3>
-                <p className="text-muted-foreground mb-4">
-                  Kendaraan tangguh dan luas untuk perjalanan keluarga atau grup dengan kenyamanan premium.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-accent" />
-                    Kapasitas 5-7 penumpang
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-accent" />
-                    Asuransi lengkap
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* MPV */}
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
-              <div className="aspect-square overflow-hidden">
-                <img 
-                  src={carMpv} 
-                  alt="MPV nyaman untuk rombongan" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-2">MPV</h3>
-                <p className="text-muted-foreground mb-4">
-                  Solusi ideal untuk rombongan dengan ruang bagasi luas dan kenyamanan optimal.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-accent" />
-                    Kapasitas 6-8 penumpang
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-accent" />
-                    Asuransi lengkap
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
