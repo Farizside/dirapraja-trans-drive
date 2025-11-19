@@ -5,6 +5,8 @@ import heroImage from "@/assets/hero-car.jpg";
 import carSedan from "@/assets/car-sedan.jpg";
 import carSuv from "@/assets/car-suv.jpg";
 import carMpv from "@/assets/car-mpv.jpg";
+import logoPlaceholder from "@/assets/logo-placeholder.png";
+import iconPlaceholder from "@/assets/icon-placeholder.png";
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -17,7 +19,10 @@ const Index = () => {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-primary">Dirapraja Trans</h1>
+          <div className="flex items-center gap-3">
+            <img src={iconPlaceholder} alt="Dirapraja Trans Icon" className="h-10 w-10 object-contain" />
+            <img src={logoPlaceholder} alt="Dirapraja Trans Logo" className="h-8 object-contain" />
+          </div>
           <div className="hidden md:flex gap-6">
             <button onClick={() => scrollToSection("beranda")} className="text-foreground hover:text-accent transition-colors">
               Beranda
