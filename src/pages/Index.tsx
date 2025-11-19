@@ -130,7 +130,7 @@ const Index = () => {
               };
               
               return (
-                <Card key={service.id} className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
+                <Card key={service.id} className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in flex flex-col">
                   <div className="aspect-video overflow-hidden">
                     <img 
                       src={serviceImages[service.id]} 
@@ -138,11 +138,11 @@ const Index = () => {
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <CardContent className="p-6">
+                  <CardContent className="p-6 flex flex-col flex-grow">
                     <h3 className="text-2xl font-bold text-foreground mb-3">{service.name}</h3>
-                    <p className="text-muted-foreground mb-4">{service.description}</p>
+                    <p className="text-muted-foreground mb-4 flex-grow">{service.description}</p>
                     <Button 
-                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground mt-auto"
                       onClick={() => scrollToSection("kontak")}
                     >
                       Hubungi Kami
