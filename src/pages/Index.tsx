@@ -13,21 +13,20 @@ import iconPlaceholder from "@/assets/icon-placeholder.png";
 import serviceTour from "@/assets/service-tour.jpg";
 import serviceRentcar from "@/assets/service-rentcar.jpg";
 import serviceKkn from "@/assets/service-kkn.jpg";
-
 const Index = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={iconPlaceholder} alt="Dirapraja Trans Icon" className="h-10 w-10 object-contain" />
-            <img src={logoPlaceholder} alt="Dirapraja Trans Logo" className="h-8 object-contain" />
+            <img alt="Dirapraja Trans Logo" src="/lovable-uploads/2f2c01d2-030f-4d9c-86cf-cc0713d6eb10.png" className="h-8 object-contain" />
           </div>
           <div className="hidden md:flex gap-6">
             <button onClick={() => scrollToSection("beranda")} className="text-foreground hover:text-accent transition-colors">
@@ -57,36 +56,22 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="beranda" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `url(${heroImage})`
+      }}>
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
-          <img 
-            src={logoPlaceholder} 
-            alt="Dirapraja Trans Logo" 
-            className="h-20 md:h-32 mx-auto mb-6 object-contain"
-          />
+          <img src={logoPlaceholder} alt="Dirapraja Trans Logo" className="h-20 md:h-32 mx-auto mb-6 object-contain" />
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Solusi Transportasi Terpercaya untuk Perjalanan Anda
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              onClick={() => scrollToSection("armada")}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8"
-            >
+            <Button size="lg" onClick={() => scrollToSection("armada")} className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8">
               Lihat Armada
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              onClick={() => scrollToSection("kontak")}
-              className="bg-background/10 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:bg-background/20 text-lg px-8"
-            >
+            <Button size="lg" variant="outline" onClick={() => scrollToSection("kontak")} className="bg-background/10 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:bg-background/20 text-lg px-8">
               Reservasi Sekarang
             </Button>
           </div>
@@ -124,35 +109,27 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service) => {
-              const serviceImages: { [key: number]: string } = {
-                1: serviceTour,
-                2: serviceRentcar,
-                3: serviceKkn,
-              };
-              
-              return (
-                <Card key={service.id} className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in flex flex-col">
+            {services.map(service => {
+            const serviceImages: {
+              [key: number]: string;
+            } = {
+              1: serviceTour,
+              2: serviceRentcar,
+              3: serviceKkn
+            };
+            return <Card key={service.id} className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in flex flex-col">
                   <div className="aspect-square overflow-hidden">
-                    <img 
-                      src={serviceImages[service.id]} 
-                      alt={`${service.name} - Layanan transportasi terpercaya`}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
+                    <img src={serviceImages[service.id]} alt={`${service.name} - Layanan transportasi terpercaya`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                   </div>
                   <CardContent className="p-6 flex flex-col flex-grow">
                     <h3 className="text-2xl font-bold text-foreground mb-3">{service.name}</h3>
                     <p className="text-muted-foreground mb-4 flex-grow">{service.description}</p>
-                    <Button 
-                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground mt-auto"
-                      onClick={() => scrollToSection("kontak")}
-                    >
+                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground mt-auto" onClick={() => scrollToSection("kontak")}>
                       Hubungi Kami
                     </Button>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </section>
@@ -171,29 +148,17 @@ const Index = () => {
           <div className="relative">
             <div className="overflow-x-auto pb-4 scrollbar-hide">
               <div className="flex gap-6 px-4">
-                {cars.map((car) => (
-                  <Card 
-                    key={car.id} 
-                    className="flex-shrink-0 w-[320px] overflow-hidden hover:shadow-lg transition-shadow animate-scale-in"
-                  >
+                {cars.map(car => <Card key={car.id} className="flex-shrink-0 w-[320px] overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
                     <div className="aspect-square overflow-hidden relative">
-                      <img 
-                        src={car.image} 
-                        alt={`${car.name} - Rental mobil terpercaya`}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
+                      <img src={car.image} alt={`${car.name} - Rental mobil terpercaya`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                       <div className="absolute top-4 right-4">
-                        {car.available ? (
-                          <Badge className="bg-green-500 hover:bg-green-600 text-white">
+                        {car.available ? <Badge className="bg-green-500 hover:bg-green-600 text-white">
                             <CheckCircle className="w-3 h-3 mr-1" />
                             Tersedia
-                          </Badge>
-                        ) : (
-                          <Badge variant="destructive">
+                          </Badge> : <Badge variant="destructive">
                             <XCircle className="w-3 h-3 mr-1" />
                             Tidak Tersedia
-                          </Badge>
-                        )}
+                          </Badge>}
                       </div>
                     </div>
                     <CardContent className="p-6">
@@ -204,16 +169,11 @@ const Index = () => {
                           <p className="text-2xl font-bold text-accent">{car.price24h}</p>
                         </div>
                       </div>
-                      <Button 
-                        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
-                        disabled={!car.available}
-                        onClick={() => scrollToSection("kontak")}
-                      >
+                      <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" disabled={!car.available} onClick={() => scrollToSection("kontak")}>
                         {car.available ? "Reservasi Sekarang" : "Tidak Tersedia"}
                       </Button>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
             </div>
           </div>
@@ -318,8 +278,6 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
