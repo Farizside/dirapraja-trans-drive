@@ -133,7 +133,7 @@ const Index = () => {
               
               return (
                 <Card key={service.id} className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in flex flex-col">
-                  <div className="aspect-video overflow-hidden">
+                  <div className="aspect-square overflow-hidden">
                     <img 
                       src={serviceImages[service.id]} 
                       alt={`${service.name} - Layanan transportasi terpercaya`}
@@ -176,7 +176,7 @@ const Index = () => {
                     key={car.id} 
                     className="flex-shrink-0 w-[320px] overflow-hidden hover:shadow-lg transition-shadow animate-scale-in"
                   >
-                    <div className="aspect-[4/3] overflow-hidden relative">
+                    <div className="aspect-square overflow-hidden relative">
                       <img 
                         src={car.image} 
                         alt={`${car.name} - Rental mobil terpercaya`}
