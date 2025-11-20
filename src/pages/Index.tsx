@@ -36,14 +36,14 @@ const Index = () => {
             <button onClick={() => scrollToSection("tentang")} className="text-foreground hover:text-accent transition-colors">
               Tentang Kami
             </button>
+            <button onClick={() => scrollToSection("layanan")} className="text-foreground hover:text-accent transition-colors">
+              Layanan
+            </button>
             <button onClick={() => scrollToSection("armada")} className="text-foreground hover:text-accent transition-colors">
               Armada
             </button>
             <button onClick={() => scrollToSection("keunggulan")} className="text-foreground hover:text-accent transition-colors">
               Keunggulan
-            </button>
-            <button onClick={() => scrollToSection("layanan")} className="text-foreground hover:text-accent transition-colors">
-              Layanan
             </button>
             <button onClick={() => scrollToSection("kontak")} className="text-foreground hover:text-accent transition-colors">
               Kontak
