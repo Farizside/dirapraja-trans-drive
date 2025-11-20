@@ -65,9 +65,11 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6">
-            Dirapraja Trans
-          </h1>
+          <img 
+            src={logoPlaceholder} 
+            alt="Dirapraja Trans Logo" 
+            className="h-20 md:h-32 mx-auto mb-6 object-contain"
+          />
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Solusi Transportasi Terpercaya untuk Perjalanan Anda
           </p>
