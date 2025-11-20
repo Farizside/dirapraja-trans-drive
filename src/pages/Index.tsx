@@ -26,7 +26,7 @@ const Index = () => {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={iconPlaceholder} alt="Dirapraja Trans Icon" className="h-10 w-10 object-contain" />
-            <img alt="Dirapraja Trans Logo" src="/lovable-uploads/2f2c01d2-030f-4d9c-86cf-cc0713d6eb10.png" className="h-8 w-16 object-contain" />
+            <img alt="Dirapraja Trans Logo" src="/lovable-uploads/2f2c01d2-030f-4d9c-86cf-cc0713d6eb10.png" className="h-8 w-16 object-fill" />
           </div>
           <div className="hidden md:flex gap-6">
             <button onClick={() => scrollToSection("beranda")} className="text-foreground hover:text-accent transition-colors">
