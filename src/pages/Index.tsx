@@ -189,7 +189,7 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="icon"
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-border hover:bg-background"
+              className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-border hover:bg-background shadow-lg"
               onClick={scrollPrev}
             >
               <ChevronLeft className="h-6 w-6" />
@@ -198,7 +198,7 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="icon"
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-border hover:bg-background"
+              className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-border hover:bg-background shadow-lg"
               onClick={scrollNext}
             >
               <ChevronRight className="h-6 w-6" />
