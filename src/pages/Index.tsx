@@ -15,15 +15,13 @@ import serviceTour from "@/assets/service-tour.jpg";
 import serviceRentcar from "@/assets/service-rentcar.jpg";
 import serviceKkn from "@/assets/service-kkn.jpg";
 const Index = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: false, 
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
     align: "start",
-    slidesToScroll: 1 
+    slidesToScroll: 1
   });
-
   const scrollPrev = () => emblaApi?.scrollPrev();
   const scrollNext = () => emblaApi?.scrollNext();
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({
@@ -159,7 +157,7 @@ const Index = () => {
 
           <div className="relative">
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-6 px-4">
+              <div className="flex gap-6">
                 {cars.map(car => <Card key={car.id} className="flex-shrink-0 w-[320px] overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
                     <div className="aspect-square overflow-hidden relative">
                       <img src={car.image} alt={`${car.name} - Rental mobil terpercaya`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
@@ -186,21 +184,11 @@ const Index = () => {
               </div>
             </div>
             
-            <Button 
-              variant="outline" 
-              size="icon"
-              className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-border hover:bg-background shadow-lg"
-              onClick={scrollPrev}
-            >
+            <Button variant="outline" size="icon" className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-border hover:bg-background shadow-lg" onClick={scrollPrev}>
               <ChevronLeft className="h-6 w-6" />
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="icon"
-              className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-border hover:bg-background shadow-lg"
-              onClick={scrollNext}
-            >
+            <Button variant="outline" size="icon" className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-border hover:bg-background shadow-lg" onClick={scrollNext}>
               <ChevronRight className="h-6 w-6" />
             </Button>
           </div>
