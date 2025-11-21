@@ -26,7 +26,7 @@ const Index = () => {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={iconPlaceholder} alt="Dirapraja Trans Icon" className="h-10 w-10 object-contain" />
-            <img alt="Dirapraja Trans Logo" src="/lovable-uploads/2f2c01d2-030f-4d9c-86cf-cc0713d6eb10.png" className="h-12 w-32 object-cover" />
+            <img alt="Dirapraja Trans Logo" src="/lovable-uploads/d905fd36-b154-4730-ab07-c997ccabe553.png" className="h-12 object-cover" />
           </div>
           <div className="hidden md:flex gap-6">
             <button onClick={() => scrollToSection("beranda")} className="text-foreground hover:text-accent transition-colors">
@@ -63,7 +63,7 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
-          <img src={logoPlaceholder} alt="Dirapraja Trans Logo" className="h-20 md:h-32 mx-auto mb-6 object-contain" />
+          <img alt="Dirapraja Trans Logo" className="h-20 md:h-32 mx-auto mb-6 object-contain" src="/lovable-uploads/f6a6805c-9df9-4a9c-b6c8-57d2827bffaa.png" />
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Solusi Transportasi Terpercaya untuk Perjalanan Anda
           </p>
