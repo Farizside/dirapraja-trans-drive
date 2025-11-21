@@ -72,9 +72,9 @@ export const cars: Car[] = [
   },
   {
     id: 10,
-    name: "Toyota Alphard",
-    image: "/src/assets/car-mpv.jpg",
-    price24h: "Rp 1.500.000",
-    available: false,
+    name: "BMW 5 Series",
+    image: "/src/assets/car-sedan.jpg",
+    price24h: "Rp 1.300.000",
+    available: true,
   },
 ];

@@ -165,11 +165,8 @@ const Index = () => {
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-2xl font-bold text-foreground mb-3">{car.name}</h3>
-                      <div className="flex items-center justify-between mb-4">
-                        <div>
-                          <p className="text-sm text-muted-foreground">Rental 24 Jam</p>
-                          <p className="text-2xl font-bold text-accent">{car.price24h}</p>
-                        </div>
+                      <div className="mb-4">
+                        <p className="text-2xl font-bold text-accent">{car.price24h}/day</p>
                       </div>
                       <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" disabled={!car.available} onClick={() => scrollToSection("kontak")}>
                         {car.available ? "Reservasi Sekarang" : "Tidak Tersedia"}
