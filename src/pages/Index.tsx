@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Car, Shield, Clock, Users, Mail, Phone, MapPin, CheckCircle, XCircle } from "lucide-react";
+import { Car, Shield, Clock, Users, Mail, Phone, MapPin, CheckCircle, XCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
 import { cars } from "@/data/cars";
 import { services } from "@/data/services";
 import heroImage from "@/assets/hero-car.jpg";
@@ -14,6 +15,15 @@ import serviceTour from "@/assets/service-tour.jpg";
 import serviceRentcar from "@/assets/service-rentcar.jpg";
 import serviceKkn from "@/assets/service-kkn.jpg";
 const Index = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: false, 
+    align: "start",
+    slidesToScroll: 1 
+  });
+
+  const scrollPrev = () => emblaApi?.scrollPrev();
+  const scrollNext = () => emblaApi?.scrollNext();
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({
@@ -148,7 +158,7 @@ const Index = () => {
           </div>
 
           <div className="relative">
-            <div className="overflow-x-auto pb-4 scrollbar-hide">
+            <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-6 px-4">
                 {cars.map(car => <Card key={car.id} className="flex-shrink-0 w-[320px] overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
                     <div className="aspect-square overflow-hidden relative">
@@ -175,6 +185,24 @@ const Index = () => {
                   </Card>)}
               </div>
             </div>
+            
+            <Button 
+              variant="outline" 
+              size="icon"
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-border hover:bg-background"
+              onClick={scrollPrev}
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              size="icon"
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border-border hover:bg-background"
+              onClick={scrollNext}
+            >
+              <ChevronRight className="h-6 w-6" />
+            </Button>
           </div>
         </div>
       </section>
