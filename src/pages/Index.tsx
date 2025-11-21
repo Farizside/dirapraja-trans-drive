@@ -63,7 +63,9 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
-          <img alt="Dirapraja Trans Logo" className="h-20 md:h-32 mx-auto mb-6 object-contain" src="/lovable-uploads/f6a6805c-9df9-4a9c-b6c8-57d2827bffaa.png" />
+          <div className="inline-block p-6 rounded-2xl bg-background/20 backdrop-blur-md border border-primary-foreground/10 mb-6">
+            <img alt="Dirapraja Trans Logo" className="h-20 md:h-32 object-contain" src="/lovable-uploads/f6a6805c-9df9-4a9c-b6c8-57d2827bffaa.png" />
+          </div>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Solusi Transportasi Terpercaya untuk Perjalanan Anda
           </p>
