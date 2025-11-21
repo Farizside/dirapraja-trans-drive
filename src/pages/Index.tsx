@@ -23,7 +23,7 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="container mx-auto h-16 ml-0 mr-0 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={iconPlaceholder} alt="Dirapraja Trans Icon" className="h-10 w-10 object-contain" />
             <img alt="Dirapraja Trans Logo" src="/lovable-uploads/d905fd36-b154-4730-ab07-c997ccabe553.png" className="h-8 object-contain" />
