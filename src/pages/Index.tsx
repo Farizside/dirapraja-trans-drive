@@ -203,17 +203,24 @@ const Index = () => {
       {/* About Section */}
       <section id="tentang" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
+          <div className="max-w-6xl mx-auto text-center animate-fade-in-up">
             <h2 className="text-4xl font-bold text-foreground mb-6">
               Tentang Dirapraja Trans
             </h2>
             <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Dirapraja Trans adalah perusahaan rental mobil terpercaya yang
-              telah melayani ribuan pelanggan dengan komitmen memberikan layanan
-              transportasi berkualitas tinggi. Kami menyediakan berbagai jenis
-              kendaraan untuk memenuhi kebutuhan perjalanan bisnis maupun
-              liburan Anda.
+              Dirapraja Trans berdiri sejak tahun 2023 dan telah bertransformasi
+              menjadi penyedia jasa Rental Mobil, Tour, dan Travel terkemuka di
+              wilayah Sumedang, Jatinangor, dan Bandung. Didirikan dengan nama
+              awal Roda Rakyat, perusahaan melakukan rebranding pada tahun 2024
+              untuk memperkuat citra profesional dan memperluas jangkauan pasar.
+              Nama "Dirapraja" sendiri memiliki makna pemimpin rakyat atau
+              pelayan bangsa, yang mencerminkan komitmen kami terhadap
+              nilai-nilai Kepemimpinan, Loyalitas, dan Integritas dalam setiap
+              pelayanan. Berlokasi strategis di Tanjungsari, Sumedang, kami
+              berada dekat dengan kawasan pendidikan besar (UNPAD, ITB, IPDN)
+              dan memiliki akses langsung ke Tol Cisumdawu, menjadikan kami
+              pilihan utama untuk mobilitas mahasiswa, akademisi, dan wisatawan.
             </p>
           </div>
         </div>
