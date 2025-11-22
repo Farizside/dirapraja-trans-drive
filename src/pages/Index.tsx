@@ -192,7 +192,7 @@ const Index = () => {
                 Solusi Transportasi Terpercaya untuk Perjalanan Anda
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8 lg:mb-0">
                 <Button
                   size="lg"
                   onClick={() => scrollToSection("armada")}
@@ -208,9 +208,18 @@ const Index = () => {
                   Reservasi Sekarang
                 </Button>
               </div>
+
+              {/* Mobile Fleet Image */}
+              <div className="flex lg:hidden justify-center mt-8">
+                <img
+                  alt="Dirapraja Trans Fleet"
+                  className="h-64 sm:h-80 object-contain drop-shadow-2xl"
+                  src={heroCars}
+                />
+              </div>
             </div>
 
-            {/* Right Image */}
+            {/* Right Image - Desktop */}
             <div className="animate-fade-in-right hidden lg:flex justify-end items-center">
               <img
                 alt="Dirapraja Trans Fleet"
