@@ -493,6 +493,9 @@ const Index = () => {
                 <p className="text-primary-foreground/90">
                   diraprajatrans.archive@gmail.com
                 </p>
+                <p className="text-primary-foreground/90">
+                  diraprajatransrentcar@gmail.com
+                </p>
               </div>
             </div>
 
