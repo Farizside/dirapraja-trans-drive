@@ -159,8 +159,9 @@ const Index = () => {
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-6">
                 {cars.map(car => <Card key={car.id} className="flex-shrink-0 w-[320px] overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
-                    <div className="aspect-square overflow-hidden">
-                      <img src={car.image} alt={`${car.name} - Rental mobil terpercaya`} className="w-full h-full object-contain hover:scale-105 transition-transform duration-300" />
+                    <div className="aspect-square overflow-hidden relative">
+                      <div className="absolute inset-0 bg-background/40 backdrop-blur-md" />
+                      <img src={car.image} alt={`${car.name} - Rental mobil terpercaya`} className="relative z-10 w-full h-full object-contain hover:scale-105 transition-transform duration-300" />
                       <div className="absolute top-4 right-4">
                         {car.available ? <Badge className="bg-green-500 hover:bg-green-600 text-white">
                             <CheckCircle className="w-3 h-3 mr-1" />
