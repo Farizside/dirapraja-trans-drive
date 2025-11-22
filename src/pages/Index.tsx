@@ -164,10 +164,6 @@ const Index = () => {
               kendaraan untuk memenuhi kebutuhan perjalanan bisnis maupun
               liburan Anda.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Dengan armada yang terawat dan driver profesional, kami memastikan
-              setiap perjalanan Anda aman, nyaman, dan tepat waktu.
-            </p>
           </div>
         </div>
       </section>
@@ -332,10 +328,13 @@ const Index = () => {
                 <Car className="w-8 h-8 text-accent" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">
-                Armada Terawat
+                Armada Terlengkap dan Terawat
               </h3>
               <p className="text-muted-foreground">
-                Semua kendaraan dalam kondisi prima dan dirawat secara berkala
+                Kami memiliki 18 unit aktif yang terdiri dari City Car, Family
+                Car dan Premium Car. dan semuanya dirawat secara berkala dengan
+                selalu memperhatikan kondisi unit untuk menjamin keamanan dan
+                kenyamanan Anda di setiap perjalanan.
               </p>
             </div>
 
@@ -344,10 +343,13 @@ const Index = () => {
                 <Shield className="w-8 h-8 text-accent" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">
-                Aman & Terpercaya
+                Layanan Fleksibel
               </h3>
               <p className="text-muted-foreground">
-                Dilengkapi asuransi dan driver berpengalaman untuk keamanan Anda
+                Kami menawarkan pilihan paket sewa harian, mingguan, dan bulanan
+                dengan opsi layanan lepas kunci atau dengan sopir profesional
+                sehingga Anda bebas menyesuaikan dengan kebutuhan perjalanan
+                pribadi maupun bisnis Anda.
               </p>
             </div>
 
@@ -356,10 +358,14 @@ const Index = () => {
                 <Clock className="w-8 h-8 text-accent" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">
-                Layanan 24/7
+                Lokasi Strategis
               </h3>
               <p className="text-muted-foreground">
-                Siap melayani kebutuhan transportasi Anda kapan saja
+                Berdomisili pusat di Tanjungsari, Sumedang, kami memiliki posisi
+                ideal yang dekat dengan kawasan kampus Jatinangor dan akses
+                langsung ke Tol Cisumdawu sehingga memungkinkan kami memberikan
+                layanan antar-jemput yang cepat dan efisien ke Sumedang,
+                Bandung, hingga Jakarta.
               </p>
             </div>
 
@@ -368,10 +374,34 @@ const Index = () => {
                 <Users className="w-8 h-8 text-accent" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">
-                Driver Profesional
+                Proses Reservasi Mudah dan Cepat
               </h3>
               <p className="text-muted-foreground">
-                Tim driver terlatih dengan pengetahuan rute yang sangat baik
+                Pelanggan dapat melakukan reservasi dan mendapatkan informasi
+                lengkap dengan cepat melalui platform digital kami, seperti
+                Instagram (@diraprajatrans), tiktok (@dirapraja.trans), facebook
+                (Dirapraja Trans) dan website resmi (diraprajatrans.com) tanpa
+                proses yang rumit. Selain itu, kami juga memberikan layanan
+                antar jemput unit untuk lebih memudahkan pelanggan dalam
+                menerima unit.
+              </p>
+            </div>
+
+            <div className="text-center p-6 animate-fade-in-up">
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Proses Reservasi Mudah dan Cepat
+              </h3>
+              <p className="text-muted-foreground">
+                Pelanggan dapat melakukan reservasi dan mendapatkan informasi
+                lengkap dengan cepat melalui platform digital kami, seperti
+                Instagram (@diraprajatrans), tiktok (@dirapraja.trans), facebook
+                (Dirapraja Trans) dan website resmi (diraprajatrans.com) tanpa
+                proses yang rumit. Selain itu, kami juga memberikan layanan
+                antar jemput unit untuk lebih memudahkan pelanggan dalam
+                menerima unit.
               </p>
             </div>
           </div>
