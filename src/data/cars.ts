@@ -9,16 +9,16 @@ export interface Car {
 export const cars: Car[] = [
   {
     id: 1,
-    name: "Toyota Avanza",
-    image: "/src/assets/car-mpv.jpg",
-    price24h: "Rp 350.000",
+    name: "Ayla (AT/MT)",
+    image: "/src/assets/cars/Ayla ATMT.png",
+    price24h: "Rp 300.000",
     available: true,
   },
   {
     id: 2,
-    name: "Honda CR-V",
-    image: "/src/assets/car-suv.jpg",
-    price24h: "Rp 550.000",
+    name: "Agya (AT/MT)",
+    image: "/src/assets/cars/Agya ATMT.png",
+    price24h: "Rp 350.000",
     available: true,
   },
   {
