@@ -69,7 +69,7 @@ const Index = () => {
       id: 3,
       title: "Lokasi Strategis",
       description:
-        "Berdomisili pusat di Tanjungsari, Sumedang, kami memiliki posisi ideal yang dekat dengan kawasan kampus Jatinangor dan akses langsung ke Tol Cisumdawu sehingga memungkinkan kami memberikan layanan antar-jemput yang cepat dan efisien ke Sumedang, Bandung, hingga Jakarta.",
+        "Berdomisili pusat di Tanjungsari, Sumedang, kami memiliki posisi ideal yang dekat dengan kawasan kampus Jatinangor dan akses langsung ke Tol Cisumdawu sehingga memungkinkan kami memberikan layanan antar-jemput yang cepat dan efisien ke Jatinangor, Sumedang, Bandung, hingga Jakarta.",
       icon: MapPinCheck,
       color: "from-green-500 to-emerald-600",
     },
@@ -364,20 +364,23 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="keunggulan" className="py-20 bg-gradient-to-b from-background to-muted/20">
+      <section
+        id="keunggulan"
+        className="py-20 bg-gradient-to-b from-background to-muted/20"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Mengapa Memilih Kami?
             </h2>
             <div className="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Komitmen kami adalah memberikan layanan terbaik dengan standar
               kualitas internasional
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-8xl mx-auto">
             {whyChooseUs.map((item, index) => {
               const IconComponent = item.icon;
               return (
@@ -396,7 +399,7 @@ const Index = () => {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-xl font-bold text-foreground mb-4 leading-snug">
+                      <h3 className="text-xl font-bold text-foreground mb-4 leading-snug min-h-[56px] flex items-center">
                         {item.title}
                       </h3>
 
@@ -406,7 +409,9 @@ const Index = () => {
                       </p>
 
                       {/* Bottom accent line */}
-                      <div className={`mt-6 h-1 w-12 rounded-full bg-gradient-to-r ${item.color}`}></div>
+                      <div
+                        className={`mt-6 h-1 w-12 rounded-full bg-gradient-to-r ${item.color}`}
+                      ></div>
                     </CardContent>
                   </Card>
                 </div>
@@ -428,22 +433,18 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center p-6 bg-primary-foreground/10 rounded-lg backdrop-blur-sm">
               <Phone className="w-8 h-8 text-accent mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">Telepon</h3>
-              <p className="text-primary-foreground/90">+62 812-3456-7890</p>
-              <p className="text-primary-foreground/90">+62 821-9876-5432</p>
+              <p className="text-primary-foreground/90">+62 895-2687-1117</p>
             </div>
 
             <div className="text-center p-6 bg-primary-foreground/10 rounded-lg backdrop-blur-sm">
               <Mail className="w-8 h-8 text-accent mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">Email</h3>
               <p className="text-primary-foreground/90">
-                info@diraprajatrans.com
-              </p>
-              <p className="text-primary-foreground/90">
-                rental@diraprajatrans.com
+                diraprajatrans.archive@gmail.com
               </p>
             </div>
 
