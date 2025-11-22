@@ -161,7 +161,7 @@ const Index = () => {
                 {cars.map(car => <Card key={car.id} className="flex-shrink-0 w-[320px] overflow-hidden hover:shadow-2xl transition-all animate-scale-in bg-background/20 backdrop-blur-xl border-border/30 relative hover:z-10">
                     <div className="aspect-square overflow-hidden relative">
                       <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-primary/5 to-accent/10 backdrop-blur-sm" />
-                      <img src={car.image} alt={`${car.name} - Rental mobil terpercaya`} className="relative z-10 w-full h-full object-contain transition-all duration-300 hover:scale-110 hover:drop-shadow-2xl hover:z-20" />
+                      <img src={car.image} alt={`${car.name} - Rental mobil terpercaya`} className="relative z-10 w-full h-full object-contain hover:scale-105 transition-transform duration-300 drop-shadow-lg" />
                       <div className="absolute top-4 right-4">
                         {car.available ? <Badge className="bg-green-500 hover:bg-green-600 text-white">
                             <CheckCircle className="w-3 h-3 mr-1" />
