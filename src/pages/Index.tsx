@@ -392,16 +392,16 @@ const Index = () => {
                 <Users className="w-8 h-8 text-accent" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">
-                Proses Reservasi Mudah dan Cepat
+                Mitra Perjalanan Terpercaya
               </h3>
               <p className="text-muted-foreground">
-                Pelanggan dapat melakukan reservasi dan mendapatkan informasi
-                lengkap dengan cepat melalui platform digital kami, seperti
-                Instagram (@diraprajatrans), tiktok (@dirapraja.trans), facebook
-                (Dirapraja Trans) dan website resmi (diraprajatrans.com) tanpa
-                proses yang rumit. Selain itu, kami juga memberikan layanan
-                antar jemput unit untuk lebih memudahkan pelanggan dalam
-                menerima unit.
+                Kami telah berpengalaman melayani perjalanan wisata ke berbagai
+                daerah seperti Banten, Bandung, dan Jawa Tengah, serta melayani
+                kebutuhan transportasi bagi instansi pemerintah dan perusahaan
+                besar, membuktikan keandalan operasional kami dalam perjalanan
+                jarak dekat maupun jarak jauh. Kami juga telah menjalin
+                kemitraan resmi dengan perusahaan besar seperti PT INTI dan PT
+                KPS yang membuktikan bahwa pelayanan kami telah terpercaya.
               </p>
             </div>
           </div>
