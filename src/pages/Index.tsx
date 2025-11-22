@@ -440,30 +440,46 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center p-6 bg-primary-foreground/10 rounded-lg backdrop-blur-sm">
-              <Phone className="w-8 h-8 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Telepon</h3>
-              <p className="text-primary-foreground/90">+62 895-2687-1117</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-8xl mx-auto">
+            <div className="flex flex-col p-6 bg-primary-foreground/10 rounded-lg backdrop-blur-sm text-center min-h-[180px]">
+              <div className="flex flex-col items-center">
+                <Phone className="w-8 h-8 text-accent mb-4" />
+                <h3 className="text-xl font-bold mb-2">Telepon</h3>
+              </div>
+
+              <div className="flex-1 flex flex-col justify-center">
+                <p className="text-primary-foreground/90">+62 895-2687-1117</p>
+              </div>
             </div>
 
-            <div className="text-center p-6 bg-primary-foreground/10 rounded-lg backdrop-blur-sm">
-              <Mail className="w-8 h-8 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Email</h3>
-              <p className="text-primary-foreground/90">
-                diraprajatrans.archive@gmail.com
-              </p>
+            <div className="flex flex-col p-6 bg-primary-foreground/10 rounded-lg backdrop-blur-sm text-center min-h-[180px]">
+              <div className="flex flex-col items-center">
+                <Mail className="w-8 h-8 text-accent mb-4" />
+                <h3 className="text-xl font-bold mb-2">Email</h3>
+              </div>
+
+              <div className="flex-1 flex flex-col justify-center">
+                <p className="text-primary-foreground/90">
+                  diraprajatrans.archive@gmail.com
+                </p>
+              </div>
             </div>
 
-            <div className="text-center p-6 bg-primary-foreground/10 rounded-lg backdrop-blur-sm">
-              <MapPin className="w-8 h-8 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Alamat</h3>
-              <p className="text-primary-foreground/90">
-                Jl. Raya Utama No. 123
-              </p>
-              <p className="text-primary-foreground/90">
-                Jakarta Selatan, Indonesia
-              </p>
+            <div className="flex flex-col p-6 bg-primary-foreground/10 rounded-lg backdrop-blur-sm text-center min-h-[180px]">
+              <div className="flex flex-col items-center">
+                <MapPin className="w-8 h-8 text-accent mb-4" />
+                <h3 className="text-xl font-bold mb-2">Alamat</h3>
+              </div>
+
+              <div className="flex-1 flex flex-col justify-center">
+                <p className="text-primary-foreground/90">
+                  Jl Lebakmaja Kaler, Dusun Babakan Asrama. Desa Jatisari,
+                  Kecamatan Tanjungsari
+                </p>
+                <p className="text-primary-foreground/90">
+                  (Belakang polsek tanjungsari)
+                </p>
+              </div>
             </div>
           </div>
         </div>
