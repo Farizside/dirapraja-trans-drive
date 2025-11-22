@@ -13,6 +13,10 @@ import {
   XCircle,
   ChevronLeft,
   ChevronRight,
+  Zap,
+  Award,
+  MapPinCheck,
+  FileText,
 } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { cars } from "@/data/cars";
@@ -24,22 +28,69 @@ import carMpv from "@/assets/car-mpv.jpg";
 import logoPlaceholder from "@/assets/logo-placeholder.png";
 import iconPlaceholder from "@/assets/icon-placeholder.png";
 import serviceTour from "@/assets/service-tour.png";
-import serviceRentcar from "@/assets/service-rentcar.jpg";
+import serviceRentcar from "@/assets/service-rentcar.png";
 import serviceKkn from "@/assets/service-kkn.jpg";
+
 const Index = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     align: "start",
     slidesToScroll: 1,
   });
+
   const scrollPrev = () => emblaApi?.scrollPrev();
   const scrollNext = () => emblaApi?.scrollNext();
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({
       behavior: "smooth",
     });
   };
+
+  const whyChooseUs = [
+    {
+      id: 1,
+      title: "Armada Terlengkap dan Terawat",
+      description:
+        "Kami memiliki 18 unit aktif yang terdiri dari City Car, Family Car dan Premium Car. dan semuanya dirawat secara berkala dengan selalu memperhatikan kondisi unit untuk menjamin keamanan dan kenyamanan Anda di setiap perjalanan.",
+      icon: Car,
+      color: "from-blue-500 to-blue-600",
+    },
+    {
+      id: 2,
+      title: "Layanan Fleksibel",
+      description:
+        "Kami menawarkan pilihan paket sewa harian, mingguan, dan bulanan dengan opsi layanan lepas kunci atau dengan sopir profesional sehingga Anda bebas menyesuaikan dengan kebutuhan perjalanan pribadi maupun bisnis Anda.",
+      icon: Zap,
+      color: "from-yellow-500 to-orange-500",
+    },
+    {
+      id: 3,
+      title: "Lokasi Strategis",
+      description:
+        "Berdomisili pusat di Tanjungsari, Sumedang, kami memiliki posisi ideal yang dekat dengan kawasan kampus Jatinangor dan akses langsung ke Tol Cisumdawu sehingga memungkinkan kami memberikan layanan antar-jemput yang cepat dan efisien ke Sumedang, Bandung, hingga Jakarta.",
+      icon: MapPinCheck,
+      color: "from-green-500 to-emerald-600",
+    },
+    {
+      id: 4,
+      title: "Proses Reservasi Mudah dan Cepat",
+      description:
+        "Pelanggan dapat melakukan reservasi dan mendapatkan informasi lengkap dengan cepat melalui platform digital kami, seperti Instagram (@diraprajatrans), tiktok (@dirapraja.trans), facebook (Dirapraja Trans) dan website resmi (diraprajatrans.com) tanpa proses yang rumit.",
+      icon: FileText,
+      color: "from-purple-500 to-indigo-600",
+    },
+    {
+      id: 5,
+      title: "Mitra Perjalanan Terpercaya",
+      description:
+        "Kami telah berpengalaman melayani perjalanan wisata ke berbagai daerah seperti Banten, Bandung, dan Jawa Tengah, serta melayani kebutuhan transportasi bagi instansi pemerintah dan perusahaan besar, membuktikan keandalan operasional kami.",
+      icon: Award,
+      color: "from-red-500 to-pink-600",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -313,97 +364,54 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="keunggulan" className="py-20 bg-background">
+      <section id="keunggulan" className="py-20 bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="text-4xl font-bold text-foreground mb-6">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Mengapa Memilih Kami?
             </h2>
             <div className="w-20 h-1 bg-accent mx-auto mb-4"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Komitmen kami adalah memberikan layanan terbaik dengan standar
+              kualitas internasional
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="text-center p-6 animate-fade-in-up">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Car className="w-8 h-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                Armada Terlengkap dan Terawat
-              </h3>
-              <p className="text-muted-foreground">
-                Kami memiliki 18 unit aktif yang terdiri dari City Car, Family
-                Car dan Premium Car. dan semuanya dirawat secara berkala dengan
-                selalu memperhatikan kondisi unit untuk menjamin keamanan dan
-                kenyamanan Anda di setiap perjalanan.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+            {whyChooseUs.map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div
+                  key={item.id}
+                  className="animate-fade-in-up"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <Card className="h-full overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-background/80 to-muted/50 backdrop-blur-xl">
+                    <CardContent className="p-8 flex flex-col h-full">
+                      {/* Icon Container */}
+                      <div
+                        className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-6 shadow-lg`}
+                      >
+                        <IconComponent className="w-10 h-10 text-white" />
+                      </div>
 
-            <div className="text-center p-6 animate-fade-in-up">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                Layanan Fleksibel
-              </h3>
-              <p className="text-muted-foreground">
-                Kami menawarkan pilihan paket sewa harian, mingguan, dan bulanan
-                dengan opsi layanan lepas kunci atau dengan sopir profesional
-                sehingga Anda bebas menyesuaikan dengan kebutuhan perjalanan
-                pribadi maupun bisnis Anda.
-              </p>
-            </div>
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-foreground mb-4 leading-snug">
+                        {item.title}
+                      </h3>
 
-            <div className="text-center p-6 animate-fade-in-up">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                Lokasi Strategis
-              </h3>
-              <p className="text-muted-foreground">
-                Berdomisili pusat di Tanjungsari, Sumedang, kami memiliki posisi
-                ideal yang dekat dengan kawasan kampus Jatinangor dan akses
-                langsung ke Tol Cisumdawu sehingga memungkinkan kami memberikan
-                layanan antar-jemput yang cepat dan efisien ke Sumedang,
-                Bandung, hingga Jakarta.
-              </p>
-            </div>
+                      {/* Description */}
+                      <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
+                        {item.description}
+                      </p>
 
-            <div className="text-center p-6 animate-fade-in-up">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                Proses Reservasi Mudah dan Cepat
-              </h3>
-              <p className="text-muted-foreground">
-                Pelanggan dapat melakukan reservasi dan mendapatkan informasi
-                lengkap dengan cepat melalui platform digital kami, seperti
-                Instagram (@diraprajatrans), tiktok (@dirapraja.trans), facebook
-                (Dirapraja Trans) dan website resmi (diraprajatrans.com) tanpa
-                proses yang rumit. Selain itu, kami juga memberikan layanan
-                antar jemput unit untuk lebih memudahkan pelanggan dalam
-                menerima unit.
-              </p>
-            </div>
-
-            <div className="text-center p-6 animate-fade-in-up">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                Mitra Perjalanan Terpercaya
-              </h3>
-              <p className="text-muted-foreground">
-                Kami telah berpengalaman melayani perjalanan wisata ke berbagai
-                daerah seperti Banten, Bandung, dan Jawa Tengah, serta melayani
-                kebutuhan transportasi bagi instansi pemerintah dan perusahaan
-                besar, membuktikan keandalan operasional kami dalam perjalanan
-                jarak dekat maupun jarak jauh. Kami juga telah menjalin
-                kemitraan resmi dengan perusahaan besar seperti PT INTI dan PT
-                KPS yang membuktikan bahwa pelayanan kami telah terpercaya.
-              </p>
-            </div>
+                      {/* Bottom accent line */}
+                      <div className={`mt-6 h-1 w-12 rounded-full bg-gradient-to-r ${item.color}`}></div>
+                    </CardContent>
+                  </Card>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -468,4 +476,5 @@ const Index = () => {
     </div>
   );
 };
+
 export default Index;
