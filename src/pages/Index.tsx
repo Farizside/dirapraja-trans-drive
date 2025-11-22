@@ -515,7 +515,7 @@ const Index = () => {
             Solusi Transportasi Terpercaya
           </p>
           <p className="text-sm text-primary-foreground/60">
-            © 2024 Dirapraja Trans. All rights reserved.
+            © 2023 Dirapraja Trans. All rights reserved.
           </p>
         </div>
       </footer>
