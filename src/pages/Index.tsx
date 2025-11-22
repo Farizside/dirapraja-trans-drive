@@ -21,7 +21,7 @@ import {
 import useEmblaCarousel from "embla-carousel-react";
 import { cars } from "@/data/cars";
 import { services } from "@/data/services";
-import heroImage from "@/assets/hero-car.jpg";
+import heroImage from "@/assets/hero-background.png";
 import carSedan from "@/assets/car-sedan.jpg";
 import carSuv from "@/assets/car-suv.jpg";
 import carMpv from "@/assets/car-mpv.jpg";
@@ -29,7 +29,8 @@ import logoPlaceholder from "@/assets/logo-placeholder.png";
 import iconPlaceholder from "@/assets/icon-placeholder.png";
 import serviceTour from "@/assets/service-tour.png";
 import serviceRentcar from "@/assets/service-rentcar.png";
-import serviceKkn from "@/assets/service-kkn.jpg";
+import serviceKkn from "@/assets/service-kkn.png";
+import heroCars from "@/assets/hero-cars.png";
 
 const Index = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -158,44 +159,65 @@ const Index = () => {
       {/* Hero Section */}
       <section
         id="beranda"
-        className="relative h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-r from-primary/95 to-primary/70"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${heroImage})`,
+            }}
+          />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
-          <div className="inline-block p-6 rounded-2xl bg-background/20 backdrop-blur-md border border-primary-foreground/10 mb-6">
-            <img
-              alt="Dirapraja Trans Logo"
-              className="h-20 md:h-32 object-contain"
-              src="/lovable-uploads/f6a6805c-9df9-4a9c-b6c8-57d2827bffaa.png"
-            />
-          </div>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Solusi Transportasi Terpercaya untuk Perjalanan Anda
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              onClick={() => scrollToSection("armada")}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8"
-            >
-              Lihat Armada
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => scrollToSection("kontak")}
-              className="bg-background/10 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:bg-background/20 text-lg px-8"
-            >
-              Reservasi Sekarang
-            </Button>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left Content */}
+            <div className="animate-fade-in">
+              <div className="mb-8 flex items-center gap-4">
+                <img
+                  alt="Dirapraja Trans Logo"
+                  className="h-16 md:h-24 object-contain flex-shrink-0"
+                  src="/lovable-uploads/5d11893b-9669-4d66-b0c5-966f04a6830f.png"
+                />
+
+                <img
+                  alt="Dirapraja Trans Text Logo"
+                  className="h-12 md:h-16 object-contain"
+                  src="/lovable-uploads/d905fd36-b154-4730-ab07-c997ccabe553.png"
+                />
+              </div>
+
+              <p className="text-lg md:text-xl text-primary-foreground/90 mb-12 leading-relaxed">
+                Solusi Transportasi Terpercaya untuk Perjalanan Anda
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  onClick={() => scrollToSection("armada")}
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-6 py-3 rounded-lg"
+                >
+                  Lihat Armada
+                </Button>
+                <Button
+                  size="lg"
+                  onClick={() => scrollToSection("kontak")}
+                  className="bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground border-2 border-primary-foreground/50 text-base px-6 py-3 rounded-lg"
+                >
+                  Reservasi Sekarang
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="animate-fade-in-right hidden lg:flex justify-end items-center">
+              <img
+                alt="Dirapraja Trans Fleet"
+                className="h-96 object-contain drop-shadow-2xl"
+                src={heroCars}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -254,11 +276,11 @@ const Index = () => {
                   key={service.id}
                   className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in flex flex-col"
                 >
-                  <div className="aspect-square overflow-hidden">
+                  <div className="overflow-hidden">
                     <img
                       src={serviceImages[service.id]}
                       alt={`${service.name} - Layanan transportasi terpercaya`}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <CardContent className="p-6 flex flex-col flex-grow">
