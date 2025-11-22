@@ -33,7 +33,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
         <div className="h-16 px-4 md:px-8 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img alt="Dirapraja Trans Icon" src="/lovable-uploads/997d641c-9a2c-4a45-9ee2-3aa299886648.png" className="h-10 w-10 object-fill" />
+            <img alt="Dirapraja Trans Icon" src="/lovable-uploads/5d11893b-9669-4d66-b0c5-966f04a6830f.png" className="h-10 w-10 object-contain" />
             <img alt="Dirapraja Trans Logo" src="/lovable-uploads/d905fd36-b154-4730-ab07-c997ccabe553.png" className="h-8 object-contain" />
           </div>
           <div className="hidden md:flex gap-6">
