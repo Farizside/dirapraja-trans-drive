@@ -23,7 +23,7 @@ import carSuv from "@/assets/car-suv.jpg";
 import carMpv from "@/assets/car-mpv.jpg";
 import logoPlaceholder from "@/assets/logo-placeholder.png";
 import iconPlaceholder from "@/assets/icon-placeholder.png";
-import serviceTour from "@/assets/service-tour.jpg";
+import serviceTour from "@/assets/service-tour.png";
 import serviceRentcar from "@/assets/service-rentcar.jpg";
 import serviceKkn from "@/assets/service-kkn.jpg";
 const Index = () => {
