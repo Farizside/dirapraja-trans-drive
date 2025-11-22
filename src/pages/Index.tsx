@@ -158,7 +158,7 @@ const Index = () => {
           <div className="relative">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-6">
-                {cars.map(car => <Card key={car.id} className="flex-shrink-0 w-[320px] overflow-hidden hover:shadow-2xl transition-all animate-scale-in bg-background/20 backdrop-blur-xl border-border/30 relative hover:z-10">
+                {cars.map(car => <Card key={car.id} className="flex-shrink-0 w-[320px] overflow-hidden hover:shadow-2xl transition-all animate-scale-in bg-background/20 backdrop-blur-xl border-border/30">
                     <div className="aspect-square overflow-hidden relative">
                       <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-primary/5 to-accent/10 backdrop-blur-sm" />
                       <img src={car.image} alt={`${car.name} - Rental mobil terpercaya`} className="relative z-10 w-full h-full object-contain hover:scale-105 transition-transform duration-300 drop-shadow-lg" />
